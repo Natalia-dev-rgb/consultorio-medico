@@ -1,4 +1,5 @@
 import './About.css'
+import profileImage from '../assets/yo.jpg'
 
 function About() {
   return (
@@ -38,13 +39,12 @@ function About() {
             </div>
           </div>
           <div className="about-image">
-            <div className="image-placeholder">
-              <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
-                <circle cx="100" cy="100" r="80" fill="#6366f1" opacity="0.1"/>
-                <circle cx="100" cy="80" r="30" fill="#6366f1"/>
-                <path d="M50 160 Q100 140 150 160" stroke="#6366f1" strokeWidth="8" fill="none"/>
-              </svg>
-            </div>
+            <img
+              className="about-photo"
+              src={profileImage}
+              alt="Foto de Natalia Miere"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
