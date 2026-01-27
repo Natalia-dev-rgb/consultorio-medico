@@ -23,14 +23,11 @@ function Footer() {
           <div className="footer-section">
             <h4>Redes Sociales</h4>
             <div className="footer-social">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/Natalia-dev-rgb" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 GitHub
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/natalia-miere-97b6692b3" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 LinkedIn
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                Twitter
               </a>
             </div>
           </div>
