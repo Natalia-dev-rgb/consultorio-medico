@@ -23,8 +23,8 @@ function Projects() {
       image: '📊',
       tags: ['React', 'TypeScript', 'Chart.js', 'API'],
       category: 'frontend',
-      link: '#',
-      github: '#'
+      link: '/project/dashboard',
+      github: 'https://github.com/Natalia-dev-rgb'
     },
     {
       id: 3,

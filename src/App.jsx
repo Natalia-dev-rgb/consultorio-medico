@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import EcommerceProject from './components/EcommerceProject'
+import DashboardProject from './components/DashboardProject'
 import './App.css'
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PortfolioHome />} />
         <Route path="/project/ecommerce" element={<EcommerceProject />} />
+        <Route path="/project/dashboard" element={<DashboardProject />} />
       </Routes>
       <button
         className={`scroll-to-top ${showScrollTop ? 'visible' : ''}`}
