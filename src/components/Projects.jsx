@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Projects.css'
 
 function Projects() {
@@ -12,8 +13,8 @@ function Projects() {
       image: '🛒',
       tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       category: 'fullstack',
-      link: '#',
-      github: '#'
+      link: '/project/ecommerce',
+      github: 'https://github.com/Natalia-dev-rgb'
     },
     {
       id: 2,
@@ -112,14 +113,20 @@ function Projects() {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a 
-                    href={project.link} 
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Ver Demo
-                  </a>
+                  {project.link.startsWith('/') ? (
+                    <Link to={project.link} className="project-link">
+                      Ver Demo
+                    </Link>
+                  ) : (
+                    <a
+                      href={project.link}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver Demo
+                    </a>
+                  )}
                   <a 
                     href={project.github} 
                     className="project-link secondary"
