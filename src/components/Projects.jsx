@@ -33,8 +33,8 @@ function Projects() {
       image: '💬',
       tags: ['React', 'Firebase', 'Material-UI', 'Real-time'],
       category: 'fullstack',
-      link: '#',
-      github: '#'
+      link: '/project/social-media',
+      github: 'https://github.com/Natalia-dev-rgb'
     },
     {
       id: 4,
