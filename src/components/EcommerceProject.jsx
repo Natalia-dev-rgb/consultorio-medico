@@ -28,6 +28,22 @@ function TechBadge({ name }) {
   )
 }
 
+// Reusable: challenge & solution card
+function ChallengeSolutionCard({ challenge, solution }) {
+  return (
+    <article className="ecom-challenge-card">
+      <div className="ecom-challenge-block">
+        <span className="ecom-challenge-label">Challenge</span>
+        <p className="ecom-challenge-text">{challenge}</p>
+      </div>
+      <div className="ecom-solution-block">
+        <span className="ecom-solution-label">Solution</span>
+        <p className="ecom-solution-text">{solution}</p>
+      </div>
+    </article>
+  )
+}
+
 // Reusable: primary/secondary buttons
 function ActionButton({ primary, href, children }) {
   const className = primary ? 'ecom-btn ecom-btn-primary' : 'ecom-btn ecom-btn-secondary'
@@ -78,6 +94,21 @@ function EcommerceProject() {
   ]
 
   const technologies = ['React', 'Node.js', 'MongoDB', 'Stripe']
+
+  const challengesAndSolutions = [
+    {
+      challenge: 'Keeping cart state consistent when the user refreshes or closes the browser.',
+      solution: 'I used React Context for global cart state and synced it with localStorage so items persist across sessions and stay in sync when opening multiple tabs.',
+    },
+    {
+      challenge: 'Handling Stripe payments safely and avoiding duplicate charges on network failures.',
+      solution: 'I implemented Stripe webhooks on the backend to confirm payments and used idempotency keys so retries do not create duplicate charges. Payment intent status is validated before updating order state.',
+    },
+    {
+      challenge: 'Restricting admin actions to authorized users only and protecting API routes.',
+      solution: 'I added JWT-based auth and role checks (user vs admin). Protected routes on the frontend redirect unauthenticated users, and the API validates the token and role on every sensitive endpoint.',
+    },
+  ]
 
   // Placeholder URLs – replace with your real links
   const liveDemoUrl = '#'
@@ -150,7 +181,26 @@ function EcommerceProject() {
         </div>
       </section>
 
-      {/* 5. GALLERY / SCREENSHOTS */}
+      {/* 5. CHALLENGE & SOLUTIONS */}
+      <section className="ecom-section ecom-challenges">
+        <div className="ecom-container">
+          <SectionTitle>Challenge & Solutions</SectionTitle>
+          <p className="ecom-challenges-intro">
+            Technical problems I faced during development and how I solved them.
+          </p>
+          <div className="ecom-challenges-grid">
+            {challengesAndSolutions.map((item, index) => (
+              <ChallengeSolutionCard
+                key={index}
+                challenge={item.challenge}
+                solution={item.solution}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. GALLERY / SCREENSHOTS */}
       <section className="ecom-section ecom-gallery">
         <div className="ecom-container">
           <SectionTitle>Screenshots</SectionTitle>
@@ -168,7 +218,7 @@ function EcommerceProject() {
         </div>
       </section>
 
-      {/* 6. ACTION BUTTONS */}
+      {/* 7. ACTION BUTTONS */}
       <section className="ecom-section ecom-actions">
         <div className="ecom-container">
           <div className="ecom-actions-buttons">
