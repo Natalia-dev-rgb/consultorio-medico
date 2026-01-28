@@ -44,14 +44,14 @@ function Contact() {
               <div className="info-icon">💼</div>
               <div>
                 <h3>Disponibilidad</h3>
-                <p>Abierta a proyectos freelance</p>
+                <p>8:00 a 13:00 y 14:00 a 18:00</p>
               </div>
             </div>
             <div className="info-item">
               <div className="info-icon">🌍</div>
               <div>
                 <h3>Ubicación</h3>
-                <p>Remoto / Disponible globalmente</p>
+                <p>San Francisco del Monte de Oro, San Luis, Argentina</p>
               </div>
             </div>
             <div className="social-links">
