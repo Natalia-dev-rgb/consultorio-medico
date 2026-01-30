@@ -1,0 +1,139 @@
+.filter-tasks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-tasks-status {
+  width: 100%;
+}
+
+.filter-tasks-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-tasks-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-tasks-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.filter-tasks-btn.active {
+  background: #0f172a;
+  color: #fff;
+  border-color: #0f172a;
+}
+
+.filter-tasks-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-tasks-input {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.9rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-tasks-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.filter-tasks-extra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-tasks-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.filter-tasks-select {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.filter-tasks-stats {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.filter-tasks-clear {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #dc2626;
+  background: #fff;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.filter-tasks-clear:hover {
+  background: #fef2f2;
+  border-color: #f87171;
+}
+
+@media (max-width: 768px) {
+  .filter-tasks {
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .filter-tasks-search {
+    min-width: 100%;
+  }
+
+  .filter-tasks-extra {
+    width: 100%;
+  }
+
+  .filter-tasks-select {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-tasks-buttons {
+    gap: 0.4rem;
+  }
+
+  .filter-tasks-btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

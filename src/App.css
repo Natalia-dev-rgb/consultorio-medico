@@ -1,62 +1,9 @@
 .App {
   width: 100%;
   min-height: 100vh;
-  position: relative;
 }
 
-/* Botón de scroll to top */
-.scroll-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 999;
-}
-
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-to-top:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-}
-
-.scroll-to-top:active {
-  transform: translateY(-3px) scale(1.05);
-}
-
-.scroll-to-top svg {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-}
-
-.scroll-to-top:hover svg {
-  transform: translateY(-2px);
-}
-
-/* Mejoras de rendimiento */
-section {
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+* {
+  scroll-behavior: smooth;
 }
 

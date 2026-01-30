@@ -1,26 +1,13 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './About.css'
 import profileImage from '../assets/yo.jpg'
 
 function About() {
-  const [titleRef, titleVisible] = useScrollAnimation({ once: true })
-  const [textRef, textVisible] = useScrollAnimation({ once: true, threshold: 0.2 })
-  const [imageRef, imageVisible] = useScrollAnimation({ once: true, threshold: 0.2 })
-
   return (
     <section id="about" className="about">
       <div className="container">
-        <h2 
-          ref={titleRef}
-          className={`section-title ${titleVisible ? 'fade-in-up' : ''}`}
-        >
-          Sobre mí
-        </h2>
+        <h2 className="section-title">Sobre mí</h2>
         <div className="about-content">
-          <div 
-            ref={textRef}
-            className={`about-text ${textVisible ? 'slide-in-left' : ''}`}
-          >
+          <div className="about-text">
             <p className="about-intro">
               Soy una <strong>desarrolladora web especializada en React</strong> con pasión por crear 
               aplicaciones modernas, eficientes y centradas en el usuario.
@@ -51,10 +38,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div 
-            ref={imageRef}
-            className={`about-image ${imageVisible ? 'slide-in-right' : ''}`}
-          >
+          <div className="about-image">
             <img
               className="about-photo"
               src={profileImage}

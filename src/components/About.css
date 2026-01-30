@@ -17,12 +17,6 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.section-title.fade-in-up {
-  opacity: 1;
 }
 
 .section-title::after {
@@ -48,12 +42,6 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #4b5563;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.about-text.slide-in-left {
-  opacity: 1;
 }
 
 .about-intro {
@@ -102,12 +90,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.about-image.slide-in-right {
-  opacity: 1;
 }
 
 .about-photo {

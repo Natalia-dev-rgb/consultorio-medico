@@ -1,0 +1,187 @@
+/* --- Tarjeta base: sombra suave --- */
+.task-card {
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  background: #fff;
+}
+
+.task-card:hover {
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
+}
+
+.task-card--dragging {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+  transform: rotate(1deg);
+  opacity: 0.98;
+  border-color: #94a3b8;
+}
+
+/* --- Colores por estado de tarea --- */
+.task-card--status-pending {
+  border-left: 4px solid #eab308;
+  background: #fffbeb;
+}
+
+.task-card--status-pending:hover {
+  box-shadow: 0 6px 16px rgba(234, 179, 8, 0.12);
+}
+
+.task-card--status-in_progress {
+  border-left: 4px solid #3b82f6;
+  background: #eff6ff;
+}
+
+.task-card--status-in_progress:hover {
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.12);
+}
+
+.task-card--status-completed {
+  border-left: 4px solid #22c55e;
+  background: #f0fdf4;
+}
+
+.task-card--status-completed:hover {
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.12);
+}
+
+.task-card--completed .task-card-title {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+/* --- Contenido --- */
+.task-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.task-card-checkbox {
+  margin-top: 0.2rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: #22c55e;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-card-title {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.task-card-description {
+  font-size: 0.85rem;
+  color: #475569;
+  margin: 0 0 0.5rem 0;
+  padding-left: 1.75rem;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.task-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding-left: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.task-card-date {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.task-card-user {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1e40af;
+  background: rgba(59, 130, 246, 0.12);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+/* --- Botones Editar y Eliminar: claros y visibles --- */
+.task-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.task-card-btn {
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.task-card-btn:hover {
+  transform: translateY(-1px);
+}
+
+.task-card-btn:active {
+  transform: translateY(0);
+}
+
+.task-card-btn-edit {
+  background: #3b82f6;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.3);
+}
+
+.task-card-btn-edit:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.task-card-btn-delete {
+  background: #fff;
+  color: #dc2626;
+  border: 1.5px solid #fca5a5;
+  box-shadow: 0 1px 2px rgba(220, 38, 38, 0.08);
+}
+
+.task-card-btn-delete:hover {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #f87171;
+}
+
+/* --- Responsive: tarjetas en móvil --- */
+@media (max-width: 480px) {
+  .task-card {
+    padding: 0.85rem;
+    margin-bottom: 0.6rem;
+    border-radius: 10px;
+  }
+
+  .task-card-title {
+    font-size: 0.9rem;
+  }
+
+  .task-card-description,
+  .task-card-meta,
+  .task-card-actions {
+    padding-left: 1.5rem;
+  }
+
+  .task-card-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.78rem;
+  }
+}

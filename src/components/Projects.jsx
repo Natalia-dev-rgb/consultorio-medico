@@ -43,8 +43,8 @@ function Projects() {
       image: '✅',
       tags: ['React', 'Redux', 'LocalStorage', 'CSS3'],
       category: 'frontend',
-      link: '#',
-      github: '#'
+      link: '/app/tasks',
+      github: 'https://github.com/Natalia-dev-rgb'
     },
     {
       id: 5,

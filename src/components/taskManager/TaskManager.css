@@ -1,0 +1,69 @@
+/* --- Contenedor principal --- */
+.task-manager {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f1f5f9 0%, #e2e8f0 50%, #f8fafc 100%);
+  padding: 1.5rem 1rem 3rem;
+}
+
+.task-manager-header {
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.task-manager-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.task-manager-back:hover {
+  color: #0f172a;
+  transform: translateX(-2px);
+}
+
+.task-manager-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.02em;
+}
+
+.task-manager-subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+.task-manager-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+@media (max-width: 768px) {
+  .task-manager {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .task-manager-main {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-manager-main {
+    padding: 0.75rem;
+  }
+}

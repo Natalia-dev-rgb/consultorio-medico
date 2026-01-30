@@ -1,0 +1,104 @@
+/* --- Kanban: tres columnas --- */
+.task-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.task-board-column {
+  border-radius: 14px;
+  padding: 1rem;
+  min-height: 280px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.2s ease;
+}
+
+.task-board-column:hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+/* Colores por columna (estado) */
+.task-board-column:nth-child(1) {
+  background: linear-gradient(180deg, #fefce8 0%, #fef9c3 100%);
+  border-color: #fde047;
+}
+
+.task-board-column:nth-child(1) .task-board-column-title {
+  color: #854d0e;
+  background: rgba(253, 224, 71, 0.25);
+}
+
+.task-board-column:nth-child(2) {
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  border-color: #93c5fd;
+}
+
+.task-board-column:nth-child(2) .task-board-column-title {
+  color: #1e40af;
+  background: rgba(147, 197, 253, 0.3);
+}
+
+.task-board-column:nth-child(3) {
+  background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
+  border-color: #86efac;
+}
+
+.task-board-column:nth-child(3) .task-board-column-title {
+  color: #166534;
+  background: rgba(134, 239, 172, 0.35);
+}
+
+.task-board-column-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.task-board-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-height: 100px;
+}
+
+.task-board-list--dragging {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border: 2px dashed #cbd5e1;
+  transition: background 0.2s ease;
+}
+
+/* --- Responsive: móvil = una columna --- */
+@media (max-width: 900px) {
+  .task-board {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .task-board-column {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-board {
+    gap: 1rem;
+  }
+
+  .task-board-column {
+    padding: 0.75rem;
+    min-height: 160px;
+  }
+
+  .task-board-column-title {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
