@@ -11,6 +11,7 @@ import EcommerceProject from './components/EcommerceProject'
 import DashboardProject from './components/DashboardProject'
 import SocialMediaProject from './components/SocialMediaProject'
 import TaskManager from './components/taskManager/TaskManager'
+import WeatherApp from './components/weather/App'
 import './App.css'
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/project/dashboard" element={<DashboardProject />} />
         <Route path="/project/social-media" element={<SocialMediaProject />} />
         <Route path="/app/tasks" element={<TaskManager />} />
+        <Route path="/app/weather" element={<WeatherApp />} />
       </Routes>
       <button
         className={`scroll-to-top ${showScrollTop ? 'visible' : ''}`}

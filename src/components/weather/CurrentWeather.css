@@ -1,0 +1,262 @@
+.current-weather-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.current-weather-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.location-info {
+  flex: 1;
+}
+
+.city-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.country {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.weather-icon-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-icon-img {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.temperature-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.temperature-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.temp-value {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #333;
+  line-height: 1;
+}
+
+.temp-unit {
+  font-size: 2.5rem;
+  color: #999;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.weather-description {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.weather-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.detail-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.detail-box:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.detail-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.detail-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.temp-range {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.temp-min,
+.temp-max {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.temp-min svg,
+.temp-max svg {
+  color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .current-weather-card {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .weather-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .city-name {
+    font-size: 1.75rem;
+  }
+
+  .weather-icon-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .temp-value {
+    font-size: 4rem;
+  }
+
+  .temp-unit {
+    font-size: 2rem;
+  }
+
+  .weather-description {
+    font-size: 1.25rem;
+  }
+
+  .weather-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .detail-box {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .current-weather-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .city-name {
+    font-size: 1.5rem;
+  }
+
+  .weather-icon-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .temp-value {
+    font-size: 3.5rem;
+  }
+
+  .temp-unit {
+    font-size: 1.75rem;
+  }
+
+  .weather-description {
+    font-size: 1.1rem;
+  }
+
+  .detail-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .detail-value {
+    font-size: 1.1rem;
+  }
+
+  .temp-range {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

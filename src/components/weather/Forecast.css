@@ -1,0 +1,60 @@
+.forecast-container {
+  margin-bottom: 2rem;
+}
+
+.forecast-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+  padding-left: 0.5rem;
+}
+
+.forecast-list-horizontal {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #667eea #f0f0f0;
+}
+
+.forecast-list-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast-list-horizontal::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.forecast-list-horizontal::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+}
+
+.forecast-list-horizontal::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+@media (max-width: 768px) {
+  .forecast-title {
+    font-size: 1.25rem;
+  }
+
+  .forecast-list-horizontal {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .forecast-list-horizontal {
+    gap: 0.5rem;
+  }
+}
